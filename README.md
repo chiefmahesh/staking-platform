@@ -5,20 +5,22 @@ Step 1: Install Required Dependencies
 Ensure you have the following installed:
 
 1. Install Node.js & npm
+
 Check if you have Node.js installed:
 node -v
 npm -v
+
 If not, install Node.js (LTS version) from Node.js official site.
 
-Alternatively, install via Homebrew:
-brew install node
-2. Install Hardhat & Dependencies
+3. Install Hardhat & Dependencies
 
 mkdir staking-platform && cd staking-platform
 npm init -y
 npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox ethers dotenv
+
 Initialize Hardhat:
 npx hardhat
+
 Choose Create an empty hardhat.config.js.
 
 Step 2: Start a Local Blockchain

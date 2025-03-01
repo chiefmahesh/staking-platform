@@ -1,18 +1,21 @@
 # staking-platform
 <img src="https://github.com/chiefmahesh/staking-platform/blob/main/staking.png" alt="Screenshot">
 ------------------------------------------------------------------------------------------------
+
 Step 1: Install Required Dependencies
+
 Ensure you have the following installed:
 
-1. Install Node.js & npm
+Install Node.js & npm
 
 Check if you have Node.js installed:
+
 node -v
 npm -v
 
 If not, install Node.js (LTS version) from Node.js official site.
 
-3. Install Hardhat & Dependencies
+Install Hardhat & Dependencies
 
 mkdir staking-platform && cd staking-platform
 npm init -y
@@ -24,6 +27,7 @@ npx hardhat
 Choose Create an empty hardhat.config.js.
 
 Step 2: Start a Local Blockchain
+
 Use Hardhat Network for local development:
 
 npx hardhat node
@@ -32,6 +36,7 @@ This will start a local Ethereum blockchain on localhost:8545.
 It will generate test accounts with private keys and ETH balance.
 
 Step 3: Deploy the Smart Contract Locally
+
 1. Write the Staking Contract
 Inside the staking-platform folder, create contracts/TokenStaking.sol and paste:
 

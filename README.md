@@ -1,4 +1,4 @@
 # staking-platform
- staking-platform
- ![Screenshot](screenshot.png)
+<img src="screenshot.png" alt="Screenshot" width="600">
+
 

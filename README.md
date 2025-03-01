@@ -1,46 +1,29 @@
 # staking-platform
 <img src="https://github.com/chiefmahesh/staking-platform/blob/main/staking.png" alt="Screenshot">
-
+------------------------------------------------------------------------------------------------
 Step 1: Install Required Dependencies
 Ensure you have the following installed:
 
 1. Install Node.js & npm
 Check if you have Node.js installed:
-
-bash
-Copy
-Edit
 node -v
 npm -v
 If not, install Node.js (LTS version) from Node.js official site.
 
 Alternatively, install via Homebrew:
-
-bash
-Copy
-Edit
 brew install node
 2. Install Hardhat & Dependencies
-bash
-Copy
-Edit
+
 mkdir staking-platform && cd staking-platform
 npm init -y
 npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox ethers dotenv
 Initialize Hardhat:
-
-bash
-Copy
-Edit
 npx hardhat
 Choose Create an empty hardhat.config.js.
 
 Step 2: Start a Local Blockchain
 Use Hardhat Network for local development:
 
-bash
-Copy
-Edit
 npx hardhat node
 This will start a local Ethereum blockchain on localhost:8545.
 
@@ -50,9 +33,6 @@ Step 3: Deploy the Smart Contract Locally
 1. Write the Staking Contract
 Inside the staking-platform folder, create contracts/TokenStaking.sol and paste:
 
-solidity
-Copy
-Edit
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -98,10 +78,6 @@ contract TokenStaking is Ownable {
 }
 2. Configure Hardhat
 Edit hardhat.config.js:
-
-javascript
-Copy
-Edit
 require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
@@ -138,9 +114,6 @@ main().catch((error) => {
 });
 Deploy the contract to the local Hardhat network:
 
-bash
-Copy
-Edit
 npx hardhat run scripts/deploy.js --network localhost
 After deployment, note the contract address.
 
@@ -148,18 +121,12 @@ Step 4: Start the Frontend Locally
 1. Setup React Frontend
 Inside your staking-platform folder:
 
-bash
-Copy
-Edit
 npx create-react-app frontend
 cd frontend
 npm install ethers web3 @mui/material
 2. Update App.js
 Edit frontend/src/App.js:
 
-javascript
-Copy
-Edit
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 
@@ -227,11 +194,10 @@ export default App;
 3. Run the Frontend
 Inside the frontend folder:
 
-bash
-Copy
-Edit
 npm start
-Step 5: Test Transactions
+
+Step 5: 
+Test Transactions
 Connect MetaMask (use localhost network in MetaMask).
 Stake Tokens and check your balance.
 Unstake Tokens and claim rewards.
